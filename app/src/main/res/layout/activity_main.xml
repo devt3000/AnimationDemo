@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gamecodeschool.animationdemo.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7">
+
+        <Button
+            android:id="@+id/btnFadeIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="19dp"
+            android:text="FADE IN" />
+
+        <Button
+            android:id="@+id/btnZoomIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnFadeIn"
+            android:layout_below="@+id/btnFadeIn"
+            android:layout_marginTop="19dp"
+            android:text="ZOOM IN" />
+
+        <Button
+            android:id="@+id/btnLeftRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnZoomIn"
+            android:layout_centerVertical="true"
+            android:text="LEFT RIGHT" />
+
+        <Button
+            android:id="@+id/btnBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnLeftRight"
+            android:layout_below="@+id/btnLeftRight"
+            android:layout_marginTop="17dp"
+            android:text="BOUNCE" />
+
+        <Button
+            android:id="@+id/btnRotateLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnBounce"
+            android:layout_below="@+id/btnBounce"
+            android:layout_marginTop="19dp"
+            android:text="ROTATE LEFT" />
+
+        <Button
+            android:id="@+id/btnFadeInOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btnFadeIn"
+            android:layout_marginEnd="17dp"
+            android:text="FADE IN OUT" />
+
+        <Button
+            android:id="@+id/btnZoomOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnZoomIn"
+            android:layout_alignBottom="@+id/btnZoomIn"
+            android:layout_alignStart="@+id/btnFadeInOut"
+            android:text="ZOOM OUT" />
+
+        <Button
+            android:id="@+id/btnTopBot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnLeftRight"
+            android:layout_alignBottom="@+id/btnLeftRight"
+            android:layout_alignStart="@+id/btnZoomOut"
+            android:text="TOP BOT" />
+
+        <Button
+            android:id="@+id/btnFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnTopBot"
+            android:layout_alignTop="@+id/btnBounce"
+            android:text="FLASH" />
+
+        <Button
+            android:id="@+id/btnRotateRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnFlash"
+            android:layout_alignTop="@+id/btnRotateLeft"
+            android:text="ROTATE RIGHT" />
+
+        <Button
+            android:id="@+id/btnFadeOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btnFadeInOut"
+            android:layout_centerHorizontal="true"
+            android:text="FADE OUT" />
+
+        <Button
+            android:id="@+id/btnRightLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnFadeOut"
+            android:layout_alignTop="@+id/btnLeftRight"
+            android:text="RIGHT LEFT" />
+
+        <SeekBar
+            android:id="@+id/seekBarSpeed"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btnRotateLeft"
+            android:layout_below="@+id/btnRotateLeft"
+            android:max="5000" />
+
+        <TextView
+            android:id="@+id/textSeekerSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/seekBarSpeed"
+            android:layout_alignEnd="@+id/btnRotateRight"
+            android:text="TextView" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <EditText
+            android:id="@+id/textStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </LinearLayout>
+</LinearLayout>
